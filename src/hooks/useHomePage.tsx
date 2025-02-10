@@ -1,10 +1,10 @@
-import { useUser } from "@clerk/clerk-react";
 import { Link } from "react-router-dom";
+import { useAuthUser } from "./useAuthUser";
 
 const useHomePageDescription = () => {
-  const { user } = useUser();
+  const { isAuthenticated } = useAuthUser();
 
-  if (user?.id) {
+  if (isAuthenticated) {
     return "Go to dashboard to explore!";
   }
   return (

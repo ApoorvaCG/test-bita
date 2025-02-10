@@ -3,9 +3,7 @@ import "./App.css";
 import {
   RedirectToSignIn,
   SignedIn,
-  SignedOut,
-  SignInButton,
-  UserButton,
+  SignedOut
 } from "@clerk/clerk-react";
 import Layout from "./templates/Layout";
 import { privateRoutes, publicRoutes } from "./routes";
