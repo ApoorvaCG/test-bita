@@ -5,6 +5,10 @@ export type AppRoute = {
   element: ReactNode;
 };
 
-export interface LayoutProps {
+export interface ILayoutProps {
   children: ReactNode;
+}
+
+export interface ITaskListProps {
+  items: { id: number; content: string }[];
 }

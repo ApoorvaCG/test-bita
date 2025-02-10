@@ -1,8 +1,8 @@
 import React from 'react';
 import Header from '../components/organisms/Header';
-import { LayoutProps } from '../types';
+import { ILayoutProps } from '../types';
 
-const Layout: React.FC<LayoutProps> = ({ children }) => (
+const Layout: React.FC<ILayoutProps> = ({ children }) => (
   <section className="min-h-screen bg-violet-50">
     <Header />
     <main aria-describedby='dashboard contents'>{children}</main>

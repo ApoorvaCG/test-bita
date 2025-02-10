@@ -1,6 +1,6 @@
-import {HomePage, SignInPage, SignUpPage, Dashboard } from "../pages";
+import { HomePage, SignInPage, SignUpPage, Dashboard } from "../pages";
+import UserProfilePage from "../pages/UserProfilePage";
 import { AppRoute } from "../types";
-
 
 /**
  * Routes accessible without authentication
@@ -16,5 +16,5 @@ export const publicRoutes: AppRoute[] = [
  */
 export const privateRoutes: AppRoute[] = [
   { path: "/dashboard", element: <Dashboard /> },
-  { path: "/profile", element: <>This is Profile page</> },
+  { path: "/profile", element: <UserProfilePage /> },
 ];
