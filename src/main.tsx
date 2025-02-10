@@ -11,6 +11,23 @@ if (!CLERK_PUBLISHABLE_KEY) {
 }
 const queryClient = new QueryClient();
 
+/* Web Vital Measures */
+if (process.env.NODE_ENV === "development") {
+  // importing named export
+  import("./reportWebVitals").then(({ reportWebVitals }) => {
+    reportWebVitals((metric) => {
+      if (process.env.NODE_ENV === "development") {
+        console.log("Web Vitals:", metric);
+      } else {
+        // In production, measures can be sent to any web analytics service in production
+        if (metric.name === 'LCP' && metric.value > 2500) {
+          console.warn(`Slow LCP detected: ${metric.value}ms`);
+        }
+      }
+    });
+  });
+}
+
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
     <QueryClientProvider client={queryClient}>
