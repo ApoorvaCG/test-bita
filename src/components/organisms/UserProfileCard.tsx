@@ -21,7 +21,7 @@ const UserProfile: React.FC<UserProfileProps> = ({ user }) => {
             {user ? user.username || user.firstName : "Guest"}!
           </span>
         </h1>
-        <p className="text-base text-gray-700">Manage your tasks here!</p>
+        <p className="text-base text-secondary-color">Manage your tasks here!</p>
       </div>
     </div>
   );

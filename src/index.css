@@ -3,5 +3,9 @@
 @tailwind utilities;
 
 .text-link {
-    @apply font-medium text-blue-500 underline;
-  }
+  @apply font-medium text-blue-500 underline;
+}
+
+.text-secondary-color {
+  @apply text-slate-500;
+}

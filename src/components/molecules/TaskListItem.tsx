@@ -7,7 +7,7 @@ const TaskListItem:React.FC<ITaskListItemProps> = ({ task, onUpdate, onDelete })
     <>
       <li
         key={task.id}
-        className={`flex justify-between items-center p-4 bg-gray-50 rounded-lg`}
+        className={`flex justify-between items-center gap-14 px-3 py-2 bg-gray-50 rounded-lg`}
       >
         {/* Task Info and Mark as Complete */}
         <div className="flex items-start gap-2">
@@ -20,23 +20,23 @@ const TaskListItem:React.FC<ITaskListItemProps> = ({ task, onUpdate, onDelete })
             <CheckCircle
               size={18}
               className={`${
-                task.status === TaskFilterType.Completed ? "text-green-500" : "text-gray-300"
+                task.status === TaskFilterType.Completed ? "text-green-500" : "text-slate-400"
               }`}
             />
           </button>
-          <div className="flex flex-col items-start">
+          <div className="flex flex-col items-start w-full gap-1">
             <h3 className="text-lg font-medium">{task.title}</h3>
-            <p className="text-sm text-gray-600">{task.description || "-"}</p>
+            <p className="text-sm text-secondary-color w-full text-left break-all overflow-y-auto">{task.description || "text-sm text-secondary-color qweqeqebqwnmebnqwmbdnbdbasdbajhsdgashgdajsduahgduiagdiuadfiuasfgdsuifgsdhjfbghjdfbshjfgsjhfgsjhdbfsndbfnmasdbcmnzbfjaygfaygf"}</p>
           </div>
         </div>
 
         {/* Task Actions */}
         <div className="flex items-center gap-3">
-          <button aria-label="Edit task" onClick={() => {}}>
-            <SquarePen size={18} strokeWidth={1} />
+          <button aria-label="Edit task" className="text-secondary-color" onClick={() => {}}>
+            <SquarePen size={14} strokeWidth={1} />
           </button>
           <button onClick={() => onDelete(task.id)} aria-label="Delete task">
-            <Trash2 size={18} color="#f9434c" strokeWidth={1} />
+            <Trash2 size={14} color="#f9434c" strokeWidth={1} />
           </button>
         </div>
       </li>

@@ -12,12 +12,13 @@ const TaskHeader = () => {
 
   return (
     <div className="flex justify-between items-center w-full mb-6">
-      <h2 className="text-lg font-semibold mb-2">My Tasks</h2>
+      <h2 className="text-lg font-semibold mb-2 text-secondary-color">My Tasks</h2>
       {/* Create New Task */}
       <div className="flex gap-2">
         <button
           aria-label="Add new task"
           title="Add a new task"
+          className="text-secondary-color"
           onClick={() =>
             createTask({
               title: "New Task",

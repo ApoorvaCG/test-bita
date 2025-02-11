@@ -12,7 +12,7 @@ const JokeWidget: React.FC = () => {
   return (
     <>
       <div className="flex justify-center items-center gap-8 w-full">
-        <h2 className="text-lg text-slate-800 mb-6">
+        <h2 className="text-lg text-secondary-color mb-6">
           Something to lighten up your day!
         </h2>
         <button
