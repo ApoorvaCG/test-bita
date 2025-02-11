@@ -5,7 +5,8 @@ import TaskHeader from "../molecules/TaskHeader";
 import { fetchTasks } from "../../scripts";
 import { Task } from "../../types";
 
-const TaskContainer:React.FC = () => {
+const TaskContainer: React.FC = () => {
+
   const {
     data: tasks = [],
     isLoading,

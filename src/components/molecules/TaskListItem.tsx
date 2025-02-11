@@ -2,7 +2,7 @@ import { CheckCircle, SquarePen, Trash2 } from "lucide-react";
 import React from "react";
 import { ITaskListItemProps, TaskFilterType } from "../../types";
 
-const TaskListItem:React.FC<ITaskListItemProps> = ({ task, onUpdate, onDelete }) => {
+const TaskListItem:React.FC<ITaskListItemProps> = ({ task, onUpdate, onDelete, onEdit }) => {
   return (
     <>
       <li
@@ -26,13 +26,13 @@ const TaskListItem:React.FC<ITaskListItemProps> = ({ task, onUpdate, onDelete })
           </button>
           <div className="flex flex-col items-start w-full gap-1">
             <h3 className="text-lg font-medium">{task.title}</h3>
-            <p className="text-sm text-secondary-color w-full text-left break-all overflow-y-auto">{task.description || "text-sm text-secondary-color qweqeqebqwnmebnqwmbdnbdbasdbajhsdgashgdajsduahgduiagdiuadfiuasfgdsuifgsdhjfbghjdfbshjfgsjhfgsjhdbfsndbfnmasdbcmnzbfjaygfaygf"}</p>
+            <p className="text-sm text-secondary-color w-full text-left break-all overflow-y-auto">{task.description || "-"}</p>
           </div>
         </div>
 
         {/* Task Actions */}
         <div className="flex items-center gap-3">
-          <button aria-label="Edit task" className="text-secondary-color" onClick={() => {}}>
+          <button aria-label="Edit task" className="text-secondary-color" onClick={()=>onEdit(task)}>
             <SquarePen size={14} strokeWidth={1} />
           </button>
           <button onClick={() => onDelete(task.id)} aria-label="Delete task">

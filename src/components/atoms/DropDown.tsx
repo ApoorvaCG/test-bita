@@ -20,7 +20,7 @@ const DropDown: React.FC<DropdownProps> = ({
   return (
     <>
       <select
-        aria-label="choose task type"
+        aria-label="choose from dropdown"
         title="Filter tasks"
         value={selectedOption || 'all'}
         onChange={(e) => handleChange(e.target.value)}

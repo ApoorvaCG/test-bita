@@ -27,6 +27,7 @@ export interface ITaskListItemProps {
   task: Task;
   onUpdate: (task: Task) => void;
   onDelete: (id: string) => void;
+  onEdit: (task: Task) => void;
 }
 export interface Task {
   id: string;
@@ -34,4 +35,9 @@ export interface Task {
   description: string;
   status: TaskFilterType;
   createdAt: string;
+}
+
+export interface ITaskFormInputs {
+  title: string;
+  description: string;
 }
