@@ -52,7 +52,7 @@ const TaskForm = <T extends FieldValues = FieldValues>({
     <>
       <div className="flex justify-between items-center w-full">
         <div className="font-2xl font-medium">
-          {initialFormData ? "New Task" : "Edit Task"}
+          {!initialFormData ? "New Task" : "Edit Task"}
         </div>
         <span className="text-secondary-color">
           <SquareX size={20} onClick={closeModal} cursor={"pointer"} />
