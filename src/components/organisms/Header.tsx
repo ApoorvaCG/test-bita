@@ -20,9 +20,9 @@ const Header:React.FC = () => {
             </span>
           </Link>
 
-          <div className="flex items-center gap-8">
+          <div className="flex items-center gap-6">
             {!user && (
-              <div className="flex items-center gap-6">
+              <>
                 <Link
                   to="/sign-in"
                   className="text-violet-800 hover:text-slate-900 transition-colors text-lg font-medium"
@@ -35,11 +35,11 @@ const Header:React.FC = () => {
                 >
                   Sign Up
                 </Link>
-              </div>
+              </>
             )}
 
             {user && (
-              <div className="flex items-center gap-6">
+              <>
                 <Link
                   to="/dashboard"
                   className="text-violet-800 hover:text-slate-900 transition-colors text-lg font-medium"
@@ -58,8 +58,9 @@ const Header:React.FC = () => {
                 >
                   Sign Out
                 </button>
-              </div>
+              </>
             )}
+            {/* Enhancement: Hamburger menu for small devices */}
           </div>
         </div>
       </div>

@@ -61,7 +61,7 @@ const TaskList: React.FC<ITaskListProps> = ({ tasks }) => {
     <>
       <ul className="flex flex-col gap-4">
         {isMutating && <div className="overlay">Processing...</div>}
-        {/* Todo: can be optimised with virtualisation, ex:react-window */}
+        {/* Enhancement: can be optimised with virtualisation, ex:react-window */}
         {filteredTasks.map((task: Task) => (
           <TaskListItem
             key={task.id}

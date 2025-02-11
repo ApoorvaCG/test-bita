@@ -1,50 +1,88 @@
-# React + TypeScript + Vite
+# My Task Manager App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Create and manage your daily tasks
 
-Currently, two official plugins are available:
+## 🚀 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **User Authenticatio**
+  - Integrates Clerk for User Authentication and Management
+- **Dashboard Page**
+  - Fetches and updates task data from a mock-API.io
+  - Fetches a random joke from a jokeapi
+  - Supports filtering tasks
+  - Navigation with react-router
+  - Keep track of web-vitals
+  - Zustand for Client state management, React Query for Server state managment with APIs
+  - Form handling with react-hook-form
+- **Filter Tasks**
+  - Filter by task status
+- **Memoised data**
+  - Task list is memoised to help with performance using useMemo and useCallback hooks
+- **Tests**
+  - Unit testing with Jest 
+- **Docker Support**
+  - Includes a `Dockerfile` for easy containerized setup and run the project
 
-## Expanding the ESLint configuration
+## Project Setup
+Clone or fork the repository to get started and run the project by installing dependencies or if you have docker setup then pull the image to get started,
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+**With dependencies**
 
-- Configure the top-level `parserOptions` property like this:
+#### 1.Install dependencies
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+```bash
+npm install
+# or
+yarn install
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+#### 2. Run the Development Server
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+```bash
+npm run dev
+# or
+yarn dev
 ```
+
+**With Docker Image**
+
+```bash
+docker pull ghcr.io/apoorvacg/test-bita/test-bita:latest
+```
+
+**With Build Docker Container**
+
+#### 1. Build the Image
+```bash
+docker build -t test-bita
+```
+
+#### 2. Run the Container
+```bash
+docker run -p 3000:3000 test-bita
+```
+
+- The app will be available at `http://localhost:3000`
+
+
+## Running Tests
+
+- The project uses **Jest** and **React Testing Library** for unit tests.
+
+### Run Tests
+
+```bash
+npm test
+# or
+yarn test
+```
+
+## Future Enhancements
+
+- **Theming** for Dark Mode
+- **CI Pipeline Integration** for e2e tests, typesafe, linting, build app
+- **Vitual scrolling** of list for better UX
+- User Profile theme customisation for Clerk component
+- Utilisation of useTransition hook to handle UI changes with forms
+
+---

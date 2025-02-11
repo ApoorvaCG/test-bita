@@ -35,7 +35,7 @@ const TaskListItem:React.FC<ITaskListItemProps> = ({ task, onUpdate, onDelete, o
           <button aria-label="Edit task" className="text-secondary-color" onClick={()=>onEdit(task)}>
             <SquarePen size={14} strokeWidth={1} />
           </button>
-          {/* TODO: Confirmation modal for Delete Action */}
+          {/* Enhance: Confirmation modal for Delete Action */}
           <button onClick={() => onDelete(task.id)} aria-label="Delete task">
             <Trash2 size={14} color="#f9434c" strokeWidth={1} />
           </button>
