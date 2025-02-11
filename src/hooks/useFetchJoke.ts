@@ -1,11 +1,13 @@
 import { useQuery } from "@tanstack/react-query";
+import { JOKE_API_URL } from "../constants";
+import { JokeType } from "../types";
 
 const fetchJoke = async () => {
-  const response = await fetch("https://v2.jokeapi.dev/joke/Any");
+  const response = await fetch(JOKE_API_URL);
   const data = await response.json();
-  if (data.type === "single") {
+  if (data.type === JokeType.Single) {
     return data.joke;
-  } else if (data.type === "twopart") {
+  } else if (data.type === JokeType.TwoPart) {
     return `${data.setup} - ${data.delivery}`;
   }
 };

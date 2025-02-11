@@ -1,3 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.text-link {
+    @apply font-medium text-blue-500 underline;
+  }

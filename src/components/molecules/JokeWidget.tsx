@@ -1,9 +1,9 @@
 import React from "react";
-import useFetchJoke from "../../hooks/useFetchJoke";
 import { RotateCw } from "lucide-react";
+import useFetchJoke from "../../hooks/useFetchJoke";
 
 const JokeWidget: React.FC = () => {
-  const { isPending, isError, data, error, refetch } = useFetchJoke();
+  const { isPending, isError, data, refetch } = useFetchJoke();
 
   const handleClick = () => {
     refetch();
@@ -23,7 +23,7 @@ const JokeWidget: React.FC = () => {
           <RotateCw size={10} color="white" />
         </button>
       </div>
-      <p className="text-xl font-">{data}</p>
+      <p className="text-xl break-words">{isError? 'Something went wrong!' :data}</p>
     </>
   );
 };

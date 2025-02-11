@@ -1,4 +1,3 @@
-// components/organisms/UserProfile.tsx
 import React from "react";
 import webdesign from "../../assets/web-design.png";
 
@@ -8,7 +7,7 @@ interface UserProfileProps {
 
 const UserProfile: React.FC<UserProfileProps> = ({ user }) => {
   return (
-    <div className="col-span-2 flex bg-white shadow-md rounded-xl p-10 w-full items-center gap-10">
+    <div className="flex bg-white shadow-md rounded-xl p-10 w-full items-center gap-10">
       <img
         src={webdesign}
         alt="Description of the image"

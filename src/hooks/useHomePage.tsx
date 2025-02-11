@@ -9,8 +9,8 @@ const useHomePageDescription = () => {
   }
   return (
     <>
-      Explore and access more features by&nbsp;
-      <Link to="/sign-in" className="font-medium text-blue-500 underline">
+      Explore and access more features by
+      <Link to="/sign-in" className="text-link">
         signing in
       </Link>
       !

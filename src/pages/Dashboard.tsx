@@ -2,8 +2,8 @@ import React from "react";
 import { useAuthUser } from "../hooks/useAuthUser";
 import { UserResource } from "@clerk/types";
 import JokeWidget from "../components/molecules/JokeWidget";
-import TaskList from "../components/molecules/TaskList";
 import UserProfileCard from "../components/organisms/UserProfileCard";
+import TaskContainer from "../components/organisms/TaskContainer";
 
 const Dashboard: React.FC = () => {
   const { isLoading, isAuthenticated, user } = useAuthUser();
@@ -14,20 +14,28 @@ const Dashboard: React.FC = () => {
   const { firstName, id, username } = user as UserResource;
 
   return (
-    <div className="max-w-7xl mx-auto py-16 flex flex-col gap-8">
-      <section className="grid grid-cols-5 gap-4">
-        <div className="col-span-3 p-4 bg-white shadow-md rounded-xl">
-          <h2 className="text-lg font-semibold mb-2">My Tasks:</h2>
-          <TaskList items={[]} />
-        </div>
-        <UserProfileCard user={{ id, firstName, username }} />
-      </section>
-      <div className="p-4 bg-white shadow-md rounded-xl grid">
-        <div className="flex w-full flex-col">
-          <JokeWidget />
+    <>
+      <div className="container mx-auto p-4">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
+          {/* Left column with Welcome and Task cards */}
+          <div className="lg:col-span-2 space-y-4">
+            {/* Welcome Card */}
+            <UserProfileCard user={{ id, firstName, username }} />
+            {/* Task Card */}
+            <div className="p-4 bg-white shadow-md rounded-xl">
+              <TaskContainer />
+            </div>
+          </div>
+
+          {/* Right column with Joke card */}
+          <div className="lg:col-span-1">
+            <div className="p-4 bg-white shadow-md rounded-xl min-h-80">
+              <JokeWidget />
+            </div>
+          </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 

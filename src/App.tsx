@@ -1,13 +1,10 @@
 import { Routes, BrowserRouter as Router, Route } from "react-router";
 import "./App.css";
-import {
-  RedirectToSignIn,
-  SignedIn,
-  SignedOut
-} from "@clerk/clerk-react";
+import { SignedIn, SignedOut } from "@clerk/clerk-react";
 import Layout from "./templates/Layout";
 import { privateRoutes, publicRoutes } from "./routes";
 import { HomePage } from "./pages";
+import NotFound from "./components/atoms/NotFound";
 
 function App() {
   return (
@@ -35,15 +32,7 @@ function App() {
               />
             ))}
 
-            {/* Redirect Unauthenticated Users */}
-            <Route
-              path="*"
-              element={
-                <SignedOut>
-                  <RedirectToSignIn />
-                </SignedOut>
-              }
-            />
+            <Route path="*" element={<NotFound />} />
           </Routes>
         </Layout>
       </Router>
