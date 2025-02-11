@@ -5,8 +5,18 @@ import Layout from "./templates/Layout";
 import { privateRoutes, publicRoutes } from "./routes";
 import { HomePage } from "./pages";
 import NotFound from "./components/atoms/NotFound";
+import { useAuthUser } from "./hooks/useAuthUser";
 
 function App() {
+  const { isLoading } = useAuthUser();
+
+  if (isLoading) {
+    return (
+      <div className="flex justify-center w-full h-screen items-center">
+        Loading...
+      </div>
+    );
+  }
   return (
     <>
       <Router>

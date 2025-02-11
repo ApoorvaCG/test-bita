@@ -6,6 +6,7 @@ const JokeWidget: React.FC = () => {
   const { isPending, isError, data, refetch } = useFetchJoke();
 
   const handleClick = () => {
+    // Todo: implement debounce custom hook to optimse api calls
     refetch();
   };
 

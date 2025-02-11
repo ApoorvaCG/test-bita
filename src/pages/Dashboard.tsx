@@ -6,9 +6,8 @@ import UserProfileCard from "../components/organisms/UserProfileCard";
 import TaskContainer from "../components/organisms/TaskContainer";
 
 const Dashboard: React.FC = () => {
-  const { isLoading, isAuthenticated, user } = useAuthUser();
+  const { isAuthenticated, user } = useAuthUser();
 
-  if (isLoading) return <p>Loading...</p>;
   if (!isAuthenticated) return <p>Please sign in</p>;
 
   const { firstName, id, username } = user as UserResource;

@@ -28,6 +28,6 @@ export const publicRoutes: AppRoute[] = [
  * Routes that require authentication
  */
 export const privateRoutes: AppRoute[] = [
-  { path: "/dashboard", element: withSuspense(Dashboard) },
+  { path: "/dashboard", element: <Dashboard/> },
   { path: "/profile", element: withSuspense(UserProfilePage) },
 ];
