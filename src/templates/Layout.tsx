@@ -5,7 +5,7 @@ import { ILayoutProps } from '../types';
 const Layout: React.FC<ILayoutProps> = ({ children }) => (
   <section className="min-h-screen bg-violet-50">
     <Header />
-    <main aria-describedby='dashboard contents'>{children}</main>
+    <main>{children}</main>
   </section>
 );
 

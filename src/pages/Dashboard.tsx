@@ -20,7 +20,7 @@ const Dashboard: React.FC = () => {
           {/* Left column with Welcome and Task cards */}
           <div className="lg:col-span-2 space-y-4">
             {/* Welcome Card */}
-            <UserProfileCard user={{ id, firstName, username }} />
+            {(firstName && username) && <UserProfileCard user={{ id, firstName, username }} />}
             {/* Task Card */}
             <div className="p-4 bg-white shadow-md rounded-xl">
               <TaskContainer />

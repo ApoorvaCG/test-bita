@@ -15,7 +15,7 @@ async function handleResponse<T>(response: Response): Promise<T> {
     return handleResponse<Task[]>(response);
   };
   
-  export const createTask = async (task: Omit<Task, 'id' | 'createdAt'>): Promise<Task> => {   
+  export const createTask = async (task: Omit<Task, 'id'>): Promise<Task> => {   
     const response = await fetch(BASE_API_URL, {
       method: 'POST',
       headers: {

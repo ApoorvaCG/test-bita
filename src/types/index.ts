@@ -34,7 +34,6 @@ export interface Task {
   title: string;
   description: string;
   status: TaskFilterType;
-  createdAt: string;
 }
 
 export interface ITaskFormInputs {

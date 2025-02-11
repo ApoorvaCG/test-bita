@@ -10,7 +10,7 @@ const Header:React.FC = () => {
   return (
     <nav
       aria-label="Main navigation"
-      className="sticky top-0 z-50 shadow-md shadow-violet-200/50 bg-violet-100"
+      className="sticky top-0 z-50 shadow-md shadow-violet-200/50 bg-violet-100 mb-10"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <div className="flex justify-between items-center h-16">
