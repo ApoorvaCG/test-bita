@@ -79,10 +79,11 @@ yarn test
 
 ## Future Enhancements
 
+- List **reordering** and **sorting** by createdAt
+- **Vitual scrolling** of list for better UX
 - **Theming** for Dark Mode
 - **CI Pipeline Integration** for e2e tests, typesafe, linting, build app
-- **Vitual scrolling** of list for better UX
-- User Profile theme customisation for Clerk component
-- Utilisation of useTransition hook to handle UI changes with forms
+- User Profile **theme** customisation for Clerk component
+- Utilisation of **useTransition** hook to handle UI changes with forms
 
 ---
