@@ -1,4 +1,4 @@
-const CLERK_PUBLISHABLE_KEY = import.meta.env.VITE_CLERK_PUBLISHABLE_KEY;
+const CLERK_PUBLISHABLE_KEY = process.env.VITE_CLERK_PUBLISHABLE_KEY;
 
 const BASE_API_URL = "https://67a9dd2865ab088ea7e4c399.mockapi.io/api/tasks";
 

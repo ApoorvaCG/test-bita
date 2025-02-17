@@ -1,4 +1,4 @@
-import { lazy, Suspense } from 'react';
+import React, { lazy, Suspense } from 'react';
 import { AppRoute } from "../types";
 
 // Lazy loading pages
