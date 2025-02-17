@@ -24,7 +24,7 @@ Create and manage your daily tasks
   - Includes a `Dockerfile` for easy containerized setup and run the project
 
 ## Project Setup
-Clone or fork the repository to get started and run the project by installing dependencies or if you have docker setup then pull the image to get started,
+This is a Vite based React App with React Routing, Jest testing. Clone or fork the repository to get started and run the project by installing dependencies or if you have docker setup then pull the image to get started,
 
 **With dependencies**
 
